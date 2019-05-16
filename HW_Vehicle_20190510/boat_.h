@@ -6,11 +6,11 @@ class boat : public waterVehicle
 	int	length;
 	int displacement;
 public:
-	boat(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color, driveType drive, 
+	boat(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color, driveType drive,
 		int	length, int displacement)
 		: waterVehicle(engine, gearBox, maxSpeed, cntPass, color, drive) {
-		this->length = 10;
-		this->displacement = 2000;
+		this->length = length;
+		this->displacement = displacement;
 	}
 	void setLength(int length) { this->length = length; }
 	int getLength() { this->length; }
@@ -19,7 +19,16 @@ public:
 
 	void start() const
 	{
-		cout << " Vehicle - boat" << ",\n engine:\t" << getEngineType()
-			<< "\n type of drive:\t" << getDriveType() << "\n\n is moving in the water.\n";
+		cout << "\nVehicle - Boat\n";
+		cout << "Engine type ----------\t" << getEngineType() << endl;
+		cout << "GearBox type ---------\t" << getGearBoxType() << endl;
+		cout << "Max Speed ------------\t" << getMaxSpeed() << endl;
+		cout << "Passangeers ----------\t" << getCntPass() << endl;
+		cout << "Body color -----------\t" << getColor() << endl;
+		cout << "Type of drive --------\t" << getDriveType() << endl;
+		cout << "Body length ----------\t" << length << endl;
+		cout << "Displacement ---------\t" << displacement << endl;
+		cout << "\nThe Boat is started by the " << getEngineType() << " engine.\n\n";
+		cout << "\n---------------------------------------------------\n";
 	}
 };

@@ -6,14 +6,10 @@ class train : public groundVehicle
 {
 	int	cntRailwayÑarriage;
 public:
-	train(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color, driveType drive, 
+	train(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color, driveType drive,
 		int	cntRailwayÑarriage)
 		: groundVehicle(engine, gearBox, maxSpeed, cntPass, color, drive) {
-		setEngineType(diesel);
-		setMaxSpeed(350);
-		setCntPass(2);
-		setColor("blue");
-		this->cntRailwayÑarriage = 10;
+		this->cntRailwayÑarriage = cntRailwayÑarriage;
 	}
 
 	void setCarriage(int carriage) { this->cntRailwayÑarriage = carriage; }
@@ -21,8 +17,16 @@ public:
 
 	void start()const
 	{
-		cout << " Vehicle - Train:\t" << ",\n engine:\t" << getEngineType()
-			<< "\n type of drive:\t" << getDriveType() << "\n\n is moving on rails.\n";
+		cout << "\nVehicle - Train\n";
+		cout << "Engine type ----------\t" << getEngineType() << endl;
+		cout << "GearBox type ---------\t" << getGearBoxType() << endl;
+		cout << "Max Speed ------------\t" << getMaxSpeed() << endl;
+		cout << "Passangeers ----------\t" << getCntPass() << endl;
+		cout << "Body color -----------\t" << getColor() << endl;
+		cout << "Type of drive --------\t" << getDriveType() << endl;
+		cout << "Quantity of carriage -\t" << cntRailwayÑarriage << endl;
+		cout << "\nThe car is started by the " << getEngineType() << " engine.\n\n";
+		cout << "\n---------------------------------------------------\n";
 	}
 };
 

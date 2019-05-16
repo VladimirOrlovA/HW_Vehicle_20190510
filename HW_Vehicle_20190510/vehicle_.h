@@ -18,11 +18,11 @@ class vehicle
 	string color;
 public:
 	vehicle(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color) {
-		this->engine = gasoline;
-		this->gearBox = mechanical;
-		this->maxSpeed = 30;
-		this->cntPass = 1;
-		this->color = "silver";
+		this->engine = engine;
+		this->gearBox = gearBox;
+		this->maxSpeed = maxSpeed;
+		this->cntPass = cntPass;
+		this->color = color;
 	}
 
 	void setEngineType(engineType engine) { this->engine = engine; }
@@ -45,7 +45,7 @@ public:
 			break;
 		case 4: return "electrical";
 			break;
-		case 5: return "physical";
+		case 5: return "the muscular strength of the human legs.";
 			break;
 		}
 	}

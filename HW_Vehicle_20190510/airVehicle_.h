@@ -8,7 +8,7 @@ public:
 	airVehicle(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color, driveType drive)
 		: vehicle(engine, gearBox, maxSpeed, cntPass, color)
 	{
-		this->drive = propeller;
+		this->drive = drive;
 	}
 	void setDriveType(driveType drive) { this->drive = drive; }
 	string getDriveType() const {

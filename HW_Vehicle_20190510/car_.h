@@ -6,19 +6,17 @@ class car : public groundVehicle
 	carType cType;
 	string brandName;
 public:
-	car(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color, driveType drive, 
+	car(engineType engine, gearBoxType gearBox, int maxSpeed, int cntPass, string color, driveType drive,
 		carType cType, string brandName)
 		: groundVehicle(engine, gearBox, maxSpeed, cntPass, color, drive)
 	{
-	/*	setMaxSpeed(150);
-		setCntPass(4);*/
-		this->cType = sedan;
-		this->brandName = "Toyota";
+		this->cType = cType;
+		this->brandName = brandName;
 	}
 
 	void setCarType(carType cType) { this->cType = cType; }
 	void setBrandName(carType brandName) { this->brandName = brandName; }
-	
+
 	string getCarType() const {
 		switch (cType)
 		{
@@ -35,9 +33,16 @@ public:
 
 	void start()const
 	{
-		cout << " Vehicle - Car:\t" <<"\n color:\t"<<getColor()<<"\n car type:\t"<< getCarType() 
-			<< "\n brand name:\t" << brandName << ",\n engine:\t" << getEngineType()
-			<< "\n type of drive:\t" << getDriveType() 
-			<< "\n\n is moving along the road at speed "<<getMaxSpeed()<<"km/h.\n\n\n";
+		cout << "\nVehicle - Car\n";
+		cout << "Engine type ----------\t" << getEngineType() << endl;
+		cout << "GearBox type ---------\t" << getGearBoxType() << endl;
+		cout << "Max Speed ------------\t" << getMaxSpeed() << endl;
+		cout << "Passangeers ----------\t" << getCntPass() << endl;
+		cout << "Body color -----------\t" << getColor() << endl;
+		cout << "Type of drive --------\t" << getDriveType() << endl;
+		cout << "Car type:-------------\t" << getCarType() << endl;
+		cout << "Car brend:------------\t" << getBrandName() << endl;
+		cout << "\nThe car is started by the " << getEngineType() << " engine.\n\n";
+		cout << "\n---------------------------------------------------\n";
 	}
 };
