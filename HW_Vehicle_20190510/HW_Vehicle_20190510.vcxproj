@@ -18,6 +18,23 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="airVehicle_.h" />
+    <ClInclude Include="bike_.h" />
+    <ClInclude Include="boat_.h" />
+    <ClInclude Include="car_.h" />
+    <ClInclude Include="groundVehicle_.h" />
+    <ClInclude Include="helicopter_.h" />
+    <ClInclude Include="plane_.h" />
+    <ClInclude Include="ship_.h" />
+    <ClInclude Include="submarine_.h" />
+    <ClInclude Include="train_.h" />
+    <ClInclude Include="vehicle_.h" />
+    <ClInclude Include="waterVehicle_.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{D31A281D-4DF7-49B6-97EC-1B4372D01332}</ProjectGuid>
@@ -114,8 +131,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
